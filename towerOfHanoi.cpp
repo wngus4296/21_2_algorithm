@@ -6,15 +6,17 @@ int cnt = 0; // 이동 횟수에 이용.
 void Hanoi(int n, char from, char temp, char to)
 // n : 원반개수, from : 원래 위치, temp : 임시 장소, to :목적지
 {
+	// cnt = pow(2, n) - 1;
+	// 가장 밑에 있는 원반을 제외한 모든 원반은 from -> temp, temp -> to로 옮겨진다.
+
 	if (n == 1) {
-		cout << "#" << cnt << ".디스크 1개를 " << from << "지점에서 " << to << "로 옮긴다." << endl;
+		cout << "#" << ++cnt << ".디스크 1개를 " << from << "지점에서 " << to << "로 옮긴다." << endl;
 	}
 	else {
 		Hanoi(n - 1, from, to, temp);
-		cout << "#" << cnt << ".디스크 1개를 " << from << "지점에서 " << to << "로 옮긴다." << endl;
+		cout << "#" << ++cnt << ".디스크 1개를 " << from << "지점에서 " << to << "로 옮긴다." << endl;
 		Hanoi(n - 1, temp, from, to);
 	}
-	cnt = pow(2, n) - 1;
 }
 
 
