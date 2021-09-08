@@ -14,9 +14,16 @@ void print_data()
 
 void sort()
 {
-	/* 이 곳에 알맞은 내용을 추가하시오. */
 	/* 입력 데이타는 L[]에 들어 있으면, 전체 원소 개수는 SIZE이다. */
-
+	for (int k = 0; k < SIZE; k++) { // array L을 순회한다. (기준값)
+		for (int s = 0; s < SIZE; s++) { // 모든 원소와 비교한다. (비교값)
+			if (L[k] < L[s]) { // 기준값보다 비교값이 클 경우 자리를 바꿔준다.
+				int temp = L[k];
+				L[k] = L[s];
+				L[s] = temp;
+			}
+		}
+	}
 }
 
 void main()
