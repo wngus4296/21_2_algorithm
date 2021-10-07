@@ -17,14 +17,14 @@ void sort()
 	/* 이 곳에 알맞은 내용을 추가하시오. */
 	/* 입력 데이타는 L[]에 들어 있으면, 전체 원소 개수는 SIZE이다. */
 	for (int j, i = 1; i <= SIZE; i++) {
-		int temp = L[i];
-		for (j = i; j > 0; j--) {
-			if (L[j - 1] > temp) {
-				L[j] = L[j - 1];
+		int temp = L[i]; // 임시 장소에 비교할 값 저장
+		for (j = i; j > 0; j--) { // 맨 끝 부터 비교
+			if (L[j - 1] > temp) { // 만약 앞 원소보다 비교값이 작으면
+				L[j] = L[j - 1]; // 앞 원소를 뒤로 보냄
 			}
 			else break;
 		}
-		L[j] = temp;
+		L[j] = temp; // 비교값 자리 세팅
 	}
 }
 
