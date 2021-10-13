@@ -4,4 +4,5 @@
 ### homework
 1. towerOfHanoi(하노이타워)
 2. sort(본인만의 정렬 프로그램)
-3. insertSort (삽입 정렬)
+3. insertSort (삽입 정렬 프로그램)
+4. selectionSort (선택 정렬 프로그램)
