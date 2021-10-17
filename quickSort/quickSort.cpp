@@ -14,12 +14,13 @@ void print_data()
 
 void quick_sort(int from, int to)
 {
-	/* 이 곳에 알맞은 내용을 추가하시오. */
-	/* 입력 데이타는 L[]에 들어 있으며, 전체 원소 개수는 SIZE이다. */
+	int i;
 
-
-
-
+	if (from < to) {
+		i = partition(from, to);
+		quick_sort(L, from, i - 1);
+		quick_sort(L, i + 1, to);
+	}
 }
 
 void main()
