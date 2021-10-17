@@ -32,7 +32,7 @@ int partition(int from, int to) {
 	L[i] = L[to];
 	L[to] = t;
 
-	return to; // 중간 인덱스 값 보낸다.
+	return i; // 중간 인덱스 값 보낸다.
 }
 
 void quick_sort(int from, int to)
