@@ -25,7 +25,7 @@ int partition(int from, int to) {
 			L[i] = L[j];
 			L[j] = t;
 		}
-	}while (j > i); // i와 j 둘 다 1씩 증가시키면서 i가 왼쪽에 있는 동안 계속 진행
+	}while (j > i); // i가 왼쪽에 있는 동안 계속 진행
 
 	// 기준값이랑 중간값을 바꿔준다. (여기서 중간값이 기준값보다 크기때문)
 	int t = L[i];
