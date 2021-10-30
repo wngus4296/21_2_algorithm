@@ -27,13 +27,13 @@ void merge(int left, int mid, int right) {
 	}
 
 	if (i > mid) { // 오른쪽이 남은 경우 나머지 처리
-		for (int s = j; s <= right; s++) {
-			sortedArray[k++] = L[s];
+		while (j <= right) {
+			sortedArray[k++] = L[j++];
 		}
 	}
 	else { // 왼쪽이 남은 경우 나머지 처리 
-		for (int s = i; s <= mid; s++) {
-			sortedArray[k++] = L[s];
+		while (i <= mid) {
+			sortedArray[k++] = L[i++];
 		}
 	}
 
