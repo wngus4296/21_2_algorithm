@@ -14,8 +14,19 @@ void print_data(double L[], int n)
 
 void Max_heap(double L[], int root, int n)
 {
-	
-
+	double rootData = L[root];
+	int child = root * 2 + 1; // 왼쪽 자식
+	while (child <= n - 1) { // 마지막 노드일 때까지
+		if (child < n - 1 && L[child] < L[child + 1]) { // 자식이 두 개라면 && 오른쪽 자식이 왼쪽 자식보다 크다면
+			child = child + 1; // 큰 자식 선택
+		}
+		if (rootData > L[child]) break; // 부모가 크다면 넘어감
+		else { // 부모 자식 바꿔줌
+			L[(child - 1) / 2] = L[child];
+			child = child * 2 + 1;
+		}
+	}
+	L[(child - 1) / 2] = rootData; // 자식에게 저장해두었던 부모값 넣어줌
 }
 
 void HeapSort(double L[], int n)
