@@ -14,7 +14,7 @@ void print_data(double L[], int n)
 
 void Max_heap(double L[], int root, int n)
 {
-	// 여기를 채워 완성하시오. 
+	
 
 }
 
@@ -23,12 +23,12 @@ void HeapSort(double L[], int n)
 	int i, temp;
 
 	// 최대 히프 구조 생성
-	for (____________________; i >= 0; i--)
+	for (int i = (n - 1) / 2; i >= 0; i--)
 		Max_heap(L, i, n);
 
 	// 실제 정렬
 	// 제일큰수(0번째 원소)를 마지막(n-1번째)으로 옮기고 나머지를 다시 heap으로
-	for (_________________; i >= 0; i--)
+	for (int i = n - 2; i >= 0; i--)
 	{
 		//두 원소 L[0],L[i+1] 교환
 		SWAP(L[0], L[i + 1], temp);
