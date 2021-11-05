@@ -21,12 +21,12 @@ void Max_heap(double L[], int root, int n)
 			child = child + 1; // 큰 자식 선택
 		}
 		if (rootData > L[child]) break; // 부모가 크다면 넘어감
-		else { // 부모 자식 바꿔줌
+		else { // 큰 값을 올린다
 			L[(child - 1) / 2] = L[child];
 			child = child * 2 + 1;
 		}
 	}
-	L[(child - 1) / 2] = rootData; // 자식에게 저장해두었던 부모값 넣어줌
+	L[(child - 1) / 2] = rootData;
 }
 
 void HeapSort(double L[], int n)
