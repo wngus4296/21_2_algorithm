@@ -16,13 +16,13 @@ void Max_heap(double L[], int root, int n)
 {
 	double rootData = L[root];
 	int child = root * 2 + 1; // 왼쪽 자식
-	while (child <= n - 1) { // 마지막 노드일 때까지
+	while (child <= n - 1) { // 자식 노드가 있으면
 		if (child < n - 1 && L[child] < L[child + 1]) { // 자식이 두 개라면 && 오른쪽 자식이 왼쪽 자식보다 크다면
 			child = child + 1; // 큰 자식 선택
 		}
 		if (rootData > L[child]) break; // 부모가 크다면 넘어감
 		else { // 큰 값을 올린다
-			L[(child - 1) / 2] = L[child];
+			L[(child - 1) / 2] = L[child]; // 부모에 자식 값 넣어줌
 			child = child * 2 + 1;
 		}
 	}
