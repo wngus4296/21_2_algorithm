@@ -16,6 +16,7 @@ void Max_heap(double L[], int root, int n)
 {
 	double rootData = L[root];
 	int child = root * 2 + 1; // 왼쪽 자식
+
 	while (child <= n - 1) { // 자식 노드가 있으면
 		if (child < n - 1 && L[child] < L[child + 1]) { // 자식이 두 개라면 && 오른쪽 자식이 왼쪽 자식보다 크다면
 			child = child + 1; // 큰 자식 선택
@@ -34,7 +35,7 @@ void HeapSort(double L[], int n)
 	int i, temp;
 
 	// 최대 히프 구조 생성
-	for (i = (n - 1) / 2; i >= 0; i--)
+	for (i = (n - 1 - 1) / 2; i >= 0; i--)
 		Max_heap(L, i, n);
 
 	// 실제 정렬
@@ -42,8 +43,8 @@ void HeapSort(double L[], int n)
 	for (i = n - 2; i >= 0; i--)
 	{
 		//두 원소 L[0],L[i+1] 교환
-		SWAP(L[0], L[i + 1], temp);
-		Max_heap(L, 0, i);
+		SWAP(L[0], L[i+1], temp);
+		Max_heap(L, 0, i + 1);
 	}
 }
 
