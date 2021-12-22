@@ -2,8 +2,8 @@
 2021-2 computer algorithm class
 
 ### assignment
-1. towerOfHanoi(하노이타워)
-2. sort(본인만의 정렬 프로그램)
+1. towerOfHanoi(하노이타워 알고리즘)
+2. sort(본인만의 정렬 프로그램) 
 3. insertSort (삽입 정렬 프로그램)
 4. selectionSort (선택 정렬 프로그램)
 5. quickSort (퀵 정렬 프로그램)
