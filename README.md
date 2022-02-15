@@ -1,5 +1,5 @@
 # 21_2_algorithm
-2021-2 computer algorithm class
+2021 - 2 computer algorithm class
 
 ### assignment
 1. towerOfHanoi(하노이타워 알고리즘)
